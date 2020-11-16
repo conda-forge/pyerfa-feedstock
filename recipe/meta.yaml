@@ -1,18 +1,18 @@
 {% set name = "pyerfa" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 58cd5fbc27e31211102568f952fdbac410b184563be4da57743cbe5e5ccebe47
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a70aa3a79f162134d35c2769b55022611e1f6845fe1ba46232156938c5cec526
 
 build:
   number: 0
   skip: true  # [py<3.6]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -37,7 +37,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.rst
-  summary: "Python bindings for ERFA routines"
+  summary: Python bindings for ERFA routines
   description: |
     PyERFA is the Python wrapper for the ERFA library (Essential Routines for
     Fundamental Astronomy), a C library containing key algorithms for astronomy,
