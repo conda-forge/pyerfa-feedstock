@@ -23,6 +23,7 @@ requirements:
     - jinja2 >=2.10.3
     - python
     - numpy 1.16.*
+    - packaging
   run:
     - python
     - numpy >=1.16
