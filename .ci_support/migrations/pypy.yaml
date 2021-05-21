@@ -14,7 +14,6 @@ __migrator:
   longterm: True
 
 python:
-  - 3.6.* *_cpython   # [not (osx and arm64)]
   - 3.7.* *_cpython   # [not (osx and arm64)]
   - 3.8.* *_cpython
   - 3.6.* *_73_pypy   # [not (win64 or (osx and arm64))]
