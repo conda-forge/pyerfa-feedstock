@@ -10,7 +10,7 @@ source:
   sha256: 6cf3a645d63e0c575a357797903eac5d2c6591d7cdb89217c8c4d39777cf18cb
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<3.6]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -18,19 +18,18 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy >=1.16                           # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - pip
     - setuptools_scm
     - jinja2 >=2.10.3
     - python
-    - numpy >=1.16
+    - numpy
     - packaging
   run:
     - python
     - {{ pin_compatible("numpy") }}
-    - numpy >=1.16
 
 test:
   imports:
