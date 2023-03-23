@@ -1,5 +1,5 @@
 {% set name = "pyerfa" %}
-{% set version = "2.0.0.2" %}
+{% set version = "2.0.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 05370b7f0b4ca5a0caa845a1b6047259ba14d5608d1a18cd180049fff8c74b12
+  sha256: d77fbbfa58350c194ccb99e5d93aa05d3c2b14d5aad8b662d93c6ad9fff41f39
 
 build:
   number: 0
