@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: c8572fd24ac779f067209dce1f2f6996d0701359724ecb89422ceb431632d554
+  patches:
+    - patches/0001-avoid-redefining-typeobject-pypy.patch
 
 build:
   number: 0
