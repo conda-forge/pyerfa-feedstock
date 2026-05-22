@@ -6,8 +6,6 @@ c_stdlib:
 - sysroot
 c_stdlib_version:
 - '2.17'
-cdt_name:
-- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -15,9 +13,9 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 is_abi3:
-- true
+- false
 is_python_min:
-- true
+- false
 numpy:
 - '2'
 pin_run_as_build:
@@ -25,10 +23,10 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.14.* *_cp314t
 target_platform:
 - linux-64
 zip_keys:
 - - python
   - is_python_min
-  - channel_sources
+  - is_abi3

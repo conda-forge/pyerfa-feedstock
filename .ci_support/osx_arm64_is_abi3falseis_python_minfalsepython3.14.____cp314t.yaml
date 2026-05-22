@@ -15,9 +15,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 is_abi3:
-- true
+- false
 is_python_min:
-- true
+- false
 macos_machine:
 - arm64-apple-darwin20.0.0
 numpy:
@@ -27,10 +27,10 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.14.* *_cp314t
 target_platform:
 - osx-arm64
 zip_keys:
 - - python
   - is_python_min
-  - channel_sources
+  - is_abi3

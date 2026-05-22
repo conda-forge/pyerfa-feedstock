@@ -8,9 +8,14 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
-      win_64_is_python_mintruepython3.10.____cpython:
-        CONFIG: win_64_is_python_mintruepython3.10.____cpython
+      win_64_is_abi3falseis_python_minfalsepython3.14.____cp314t:
+        CONFIG: win_64_is_abi3falseis_python_minfalsepython3.14.____cp314t
         UPLOAD_PACKAGES: 'True'
+        store_build_artifacts: false
+      win_64_is_abi3trueis_python_mintruepython3.10.____cpython:
+        CONFIG: win_64_is_abi3trueis_python_mintruepython3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+        store_build_artifacts: false
   timeoutInMinutes: 360
   variables:
     CONDA_BLD_PATH: D:\\bld\\
