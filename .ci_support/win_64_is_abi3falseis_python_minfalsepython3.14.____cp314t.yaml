@@ -1,0 +1,26 @@
+c_compiler:
+- vs2022
+c_stdlib:
+- vs
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+is_abi3:
+- false
+is_python_min:
+- false
+numpy:
+- '2'
+pin_run_as_build:
+  python:
+    min_pin: x.x
+    max_pin: x.x
+python:
+- 3.14.* *_cp314t
+target_platform:
+- win-64
+zip_keys:
+- - python
+  - is_python_min
+  - is_abi3
